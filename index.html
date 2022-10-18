@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WebDev Studio</title>
+    <!-- import javascript variables and functions -->
+    <script src="app.js" defer></script>
+    <!-- import CSS styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <!-- page content goes into <body> -->
+  <body>
+    <header>
+
+      <div style="display: flex; flex-direction: row; width: 25%; justify-content: space-between; align-items: center;">
+        <img src="assets/nobg7.png" class="logo" alt = "no logo"/>
+
+        <div class="dropdown" >
+          <button class="dropbtn">
+            <svg width="2vw" height="2vw" viewBox="0 0 54 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0V5.28571H54V0H0ZM0 15.8571V21.1429H54V15.8571H0ZM0 31.7143V37H54V31.7143H0Z" fill="white"/>
+            </svg>
+            </button>
+          <div class="dropdown-content">
+            <a href="#">Menu</a>
+            <a href="#">Special Offers</a>
+            <a href="#">Buy Gift Cards</a>
+          </div>
+        </div>
+      </div>
+
+     
+
+      <div id="cart-container">
+        <svg
+          width="2vw"
+          height="2vw"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.6 25.6C7.84 25.6 6.416 27.04 6.416 28.8C6.416 30.56 7.84 32 9.6 32C11.36 32 12.8 30.56 12.8 28.8C12.8 27.04 11.36 25.6 9.6 25.6ZM0 0V3.2H3.2L8.96 15.344L6.8 19.264C6.544 19.712 6.4 20.24 6.4 20.8C6.4 22.56 7.84 24 9.6 24H28.8V20.8H10.272C10.048 20.8 9.872 20.624 9.872 20.4L9.92 20.208L11.36 17.6H23.28C24.48 17.6 25.536 16.944 26.08 15.952L31.808 5.568C31.936 5.344 32 5.072 32 4.8C32 3.92 31.28 3.2 30.4 3.2H6.736L5.232 0H0ZM25.6 25.6C23.84 25.6 22.416 27.04 22.416 28.8C22.416 30.56 23.84 32 25.6 32C27.36 32 28.8 30.56 28.8 28.8C28.8 27.04 27.36 25.6 25.6 25.6Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </header>
+
+    <main>
+
+
+      <section class="menu-container special">
+        <h1 class="menu-title">Specialties</h1>
+
+        <h2 class="menu-subtitle">
+
+          Our signature bowls are fresh, flavor packed, and sure to fill your poke craving.
+        </h2>
+
+        <div class="menu-items">
+            <div class="menu-item">
+
+            
+                <div class="popup" onclick="popUp(0)">
+                  <div class="popuptext" id="p0">
+                    <text>
+                        Ingredients: Raw ahi tuna, cucumber, sweet onion, hijiki seaweed, edamame, Pokeworks classic sauce, chili flakes, seaweed salad, green onion, sesame seeds, seasonal crunch.
+                        <br />
+                        <br />
+                        Calories: 260-290                    
+                        <br />
+                        <br />
+                        $14.95
+                    </text>
+
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                        
+                    
+                  </div>
+                </div>
+                <img src="assets/special/nobg1.png" alt = "No image of Hawaiian Ahi bowl" />
+                <h4 class="menu-name">Hawaiian Ahi</h4>
+              </div>
+          <div class="menu-item">
+
+
+            <div class="popup" onclick="popUp(1)">
+              <div class="popuptext" id="p1">
+                <text>
+                    Ingredients: Raw ahi tuna, cucumber, sweet onion, hijiki seaweed, edamame, umami shoyu sauce, surimi salad, pickled ginger, green onion, sesame seeds, garlic crisps. 
+                <br />
+                <br />
+                Calories: 190-799
+                <br />
+                <br />
+                $14.95
+                </text>
+                <div class = "butt-container">
+                    <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+            <img src="assets/special/nobg6.png" alt = "no image of Umami Ahi Bowl"/>
+            <h4 class="menu-name">Umami Ahi</h4>
+          </div>
+          <div class="menu-item">
+            <div class="popup" onclick="popUp(2)">
+                <div class="popuptext" id="p2">
+                    <text>
+                        Ingredients: Raw ahi tuna, cucumber, sweet onion, edamame, sriracha aioli, masago, green onion, sesame seeds, onion crisps shredded nori. 
+                        <br />
+                        <br />
+                        Calories: 300-1020
+                        <br />
+                        <br />
+                        $14.95
+                    </text>
+                 
+                  <div class = "butt-container">
+                    <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                    </svg>
+                </div>
+                  
+                </div>
+              </div>
+            <img src="assets/special/nobg5.png" alt = "No Image of Spicy Ahi Bowl"/>
+            <h4 class="menu-name">Spicy Ahi</h4>
+          </div>
+          <div class="menu-item">
+            <div class="popup" onclick="popUp(3)">
+                <div class="popuptext" id="p3">
+                    <text>
+                  Ingredients: Raw Atlantic salmon, cucumber, sweet onion, pineapple, cilantro, ponzu fresh sauce, seaweed salad green onion, sesame seeds, onion crisps. 
+                  <br />
+                  <br />
+                  Calories: 240-940
+                  <br />
+                  <br />
+                  $14.95
+                  
+                  </text>
+                  <div class = "butt-container">
+                    <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                    </svg>
+                </div>
+                </div>
+              </div>
+            <img src="assets/special/nobg4.png" alt = "No image of Yuzu Ponzu Salmon Bowl"/>
+            <h4 class="menu-name">Yuzu Ponzu Salmon</h4>
+          </div>
+          <div class="menu-item">
+            <div class="popup" onclick="popUp(4)">
+                <div class="popuptext" id="p4">
+                    <text>
+                  Ingredients: Cooked all natural chicken breast, cucumber, sweet onion, edamame, mandarin orange, cilantro, Pokeworks classic sauce, seaweed salad, green onion, sesame, wonton crisps. 
+                  <br />
+                  <br />
+                  Calories: 240-880
+                  <br />
+                  <br />
+                  $14.95
+                  </text>
+                  <div class = "butt-container">
+                    <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                    </svg>
+                </div>
+                </div>
+              </div>
+            <img src="assets/special/nobg3.png" alt = "No image of Sweet Sesame Chicken Bowl" />
+            <h4 class="menu-name">Sweet Sesame Chicken</h4>
+          </div>
+          <div class="menu-item">
+            <div class="popup" onclick="popUp(5)">
+                <div class="popuptext" id="p5">
+                    <text>
+                  Ingredients: Organic tofu, cucumber, sweet onion, blanched kale, edamame, sweet shoyu sauce, avocado, green onion, seaweed salad, sesame seeds. 
+                  <br />
+                  <br />
+                  Cal 260-290
+                  <br />
+                  <br />
+                  $14.49
+                  </text>
+                  <div class = "butt-container">
+                    <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                    </svg>
+                </div>
+                </div>
+              </div>
+            <img src="assets/special/nobg2.png" alt = "No image of Sweet Shoyu Tofu bowl"/>
+            <h4 class="menu-name">Sweet Shoyu Tofu</h4>
+          </div>
+      </section>
+
+      <section class="menu-container own">
+        <h1 class="menu-title">Build Your Own</h1>
+
+        <h2 class="menu-subtitle">
+          Create your own bowl/nachos/burrito with our fresh selection of toppings, mix-ins, protiens, and sauces!
+        </h2>
+
+        <div class="menu-items">
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(6)">
+                <div class="popuptext" id="p6">
+                    <text>                    Nachos, Burrito, Bowl
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                </div>
+              </div>
+              <img src="assets/buildown/burrito.png" alt = "No image of sushi burrito"/>
+              <h4 class="menu-name">Type</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(7)">
+                  <div class="popuptext" id="p7">
+                    <text>
+                    Sushi Rice, Brown Rice, Salad Mix, Kale Noodles
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/buildown/nobgRice.png" alt = "No image of rice"/>
+              <h4 class="menu-name">Base</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(8)">
+                  <div class="popuptext" id="p8">
+                    <text>
+                    Chicken, Ahi Tuna, Spicy Tuna, Salmon, Spicy Salmon, Shrimp, Organic Tofu
+                    <br />
+                    <br />
+                    Calories: 24-450
+                    </text>                   
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/buildown/nobgsalmon.png" alt = "No image of salmon" />
+              <h4 class="menu-name">Protiens</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(9)">
+                  <div class="popuptext" id="p9">
+                    <text>
+
+                   
+                    Cucumber, Sweet Onion, Cabbage, Sweet Corn, Edamame, Blanched Kale, Mandarin Orange, Pineapple, Hijiki Seaweed, Cilantro, Serrano Pepper, Mango
+                    <br />
+                    <br />
+                    Calories: 5-30 each
+                    </text>
+
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                  
+                </div>
+              <img src="assets/buildown/nobgcucumber.png"  alt = "No image of cucumber"/>
+              <h4 class="menu-name">Toppings</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(10)">
+                  <div class="popuptext" id="p10">
+                    <text>
+                    Pokeworks Classic, Umami Shoyu, Sweet Shoyu, Sriracha Aioli, Serrano Aioli, Ponzu Fresh, Sweet Chili Gochujang, Classic Salt
+                    <br />
+                    <br />
+                    Calories: 40-240
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/buildown/nobgseaweed.png" alt = "No image of seaweed salad"/>
+              <h4 class="menu-name">Mix-ins</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(11)">
+                  <div class="popuptext" id="p11">
+                    <text>
+                    Avocado, Seaweed Salad, Surimi Salad, Masago, Green Onion, Picked Ginger, Wasabi, Soft Tofu, Spicy Furikake
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/buildown/nobgsoy.png" alt = "No image of soy sauce"/>
+              <h4 class="menu-name">Sauce</h4>
+            </div>
+          </div>
+      </section>
+
+      <section class="menu-container drinks">
+        <h1 class="menu-title">Sides</h1>
+
+        <h2 class="menu-subtitle">
+          Satisfy your cravings with a side or desert.
+        </h2>
+
+        <div class="menu-items">
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(18)">
+                <div class="popuptext" id="p18">
+                    <text>
+                  Calories: 85
+                  <br />
+                  <br />
+                  $2.50
+                  </text>
+                  <div class = "butt-container">
+                    <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                    </svg>
+                </div>
+                </div>
+              </div>
+              <img src="assets/sides/snack5.png" alt = "No image of Miso Soup"/>
+              <h4 class="menu-name">Hot Miso Soup</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(19)">
+                  <div class="popuptext" id="p19">
+                    <text>
+
+                 
+                    Calories: 280
+                    <br />
+                    <br />
+                    $2.50
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/sides/snack4.png" alt = "no image of spicy edamame"/>
+              <h4 class="menu-name">Spicy Edamame</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(20)">
+                  <div class="popuptext" id="p20">
+                    <text>
+                    Calories: 210
+                    <br />
+                    <br />
+                    $2.50
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/sides/nobgseaweed.png"  alt = "No image of seaweed salad"/>
+              <h4 class="menu-name">Seaweed Salad</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(21)">
+                  <div class="popuptext" id="p21">
+                    <text>
+                    Calories: 90
+                    <br />
+                    <br />
+                    $2.00
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/sides/snack2.png"  alt = "No image of kettle chips"/>
+              <h4 class="menu-name">Kettle Chips</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(22)">
+                  <div class="popuptext" id="p22">
+                    <text>
+                    Calories: 210
+                    <br />
+                    <br />
+                    $3.49
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/sides/snack1.png" alt = "No image of Coco Mango Haupia"/>
+              <h4 class="menu-name">Coco Mango Haupia</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(23)">
+                  <div class="popuptext" id="p23">
+                    <text>
+                    Calories: 250
+                    <br />
+                    <br />
+                    $2.50
+                    </text>
+                  <div class = "butt-container">
+                    <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                    </svg>
+                </div>
+                </div>
+            </div>
+
+              <img src="assets/sides/snack3.png" alt = "No image of surimi salad"/>
+              <h4 class="menu-name">Surimi Salad</h4>
+            </div>
+          </div>
+      </section>
+
+      <section class="menu-container sides">
+        <h1 class="menu-title">Drinks</h1>
+
+        <h2 class="menu-subtitle">
+          What is a poke bowl without a refreshing drink?
+        </h2>
+
+        <div class="menu-items">
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(12)">
+                <div class="popuptext" id="p12">
+                    <text>
+                   Aquafina, Dasani, Evian, Voss
+                  <br>
+                  <br>
+                  Calories: 0
+                  <br />
+                  <br />
+                  $2.50
+                  </text>
+
+                  <div class = "butt-container">
+                    <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                    </svg>
+                </div>
+                </div>
+              </div>
+              <img src="assets/drinks/d3.png" alt = "No image of bottled water"/>
+              <h4 class="menu-name">Bottled Water</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(13)">
+                  <div class="popuptext" id="p13">
+                    <text>
+                    La Croix (watermelon, stawberry, apple), Aha (green tea, lemon, rasberry)
+                    <br />
+                    <br />
+                    Calories: 0
+                    <br />
+                    <br />
+                    $2.50
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/drinks/d2.png" alt = "No image of sparkling water"/>
+              <h4 class="menu-name">Sparkling Water</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(14)">
+                  <div class="popuptext" id="p14">
+                    <text>
+                    CocaCola (zero, diet, cherry), Barq's Root Beer, Fanta (orange, stawberry), Sprite
+                    <br />
+                    <br />
+                    Calories: 0-290
+                    <br />
+                    <br />
+                    $2.50
+                    </text>
+                    
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/drinks/drink4.png" alt = "No image of fountain drink"/>
+              <h4 class="menu-name">Fountain Drink</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(15)">
+                  <div class="popuptext" id="p15">
+                    <text>
+                    CocaCola, Sprite, Fanta (orange)
+                    <br />
+                    <br />
+                    Calories: 0-290
+                    <br />
+                    <br />
+                    $3.00
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/drinks/d1.png" alt = "No image of bottled water"/>
+              <h4 class="menu-name">Bottled Drinks</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(16)">
+                  <div class="popuptext" id="p16">
+                    <text>
+                    Snapple (peach, watermelon, blueberry), Tazo, Arizona (watermelon, apple)
+                    <br />
+                    <br />
+                    Calories: 0-120
+                    <br />
+                    <br />
+                    $3.00
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/icebg.png" alt = "No image of teas"/>
+              <h4 class="menu-name">Teas and Refreshers</h4>
+            </div>
+            <div class="menu-item">
+              <div class="popup" onclick="popUp(17)">
+                  <div class="popuptext" id="p17">
+                    <text>
+                    Lilikoi Lychee, Guava Nectar, Passion Orange, Pass-O-Guava Nectar
+                    <br />
+                    <br />
+                    Calories: 0-120
+                    <br />
+                    <br />
+                    $2.50
+                    </text>
+                    <div class = "butt-container">
+                        <svg width="3.2vw" height="3.2vw" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5 0C12.3118 0 0 12.3118 0 27.5C0 42.6882 12.3118 55 27.5 55C42.6882 55 55 42.6882 55 27.5C55 12.3118 42.6882 0 27.5 0ZM41.25 30.25H30.25V41.25H24.75V30.25H13.75V24.75H24.75V13.75H30.25V24.75H41.25V30.25Z" fill="#DC6601"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              <img src="assets/drinks/drink3.png" alt = "No image of hawaiian sun"/>
+              <h4 class="menu-name">Hawaiian Sun</h4>
+            </div>
+          </div>
+      </section>
+
+
+      <div style="position: relative; flex-direction: column;">
+        <div style="position: absolute; bottom: 3vw; width: 100%; justify-content: space-evenly; display: flex; flex-direction: row;">
+          <a class="bottom-link">Location: 899 Thayer street</a>
+          <a class="bottom-link">Hours: 8-10pm</a>
+          <a class="bottom-link" href = "https://pokeworks.com/" style="color: black;">Main Website</a>
+        </div>
+      </div>
+
+      
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
